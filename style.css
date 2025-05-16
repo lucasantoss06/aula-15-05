@@ -6,27 +6,36 @@
   font-family: Arial, sans-serif;
 }
 
-/* Bloco com texto e imagem lado a lado */
+/* Bloco com texto à esquerda e imagem à direita */
 .bloco-destaque {
   display: flex;
-  align-items: center; /* Alinha o texto e a imagem verticalmente */
-  gap: 20px; /* Espaçamento entre o texto e a imagem */
+  align-items: center; /* Alinha verticalmente */
+  gap: 20px; /* Espaço entre texto e imagem */
   margin-bottom: 40px;
   justify-content: flex-start; /* Alinha à esquerda */
 }
 
-/* Estilização do parágrafo */
+/* Bloco com imagem à esquerda e texto à direita */
+.bloco-invertido {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  justify-content: flex-start;
+  flex-direction: row-reverse; /* Inverte a ordem: imagem à esquerda */
+}
+
+/* Estilização do texto */
 .texto-destaque {
-  color: #2C3E50; /* Cor do texto */
-  font-family: 'Arial', sans-serif;
+  color: #2c3e50;
+  font-family: Arial, sans-serif;
   font-size: 18px;
   line-height: 1.6;
   max-width: 500px;
-  min-height: 150px; /* Altura mínima para igualar os parágrafos */
   text-align: justify;
 }
 
-/* Estilização da imagem */
+/* Estilização das imagens */
 .imagem-destaque {
   width: 350px;
   height: auto;
