@@ -22,10 +22,9 @@
   gap: 20px;
   margin-bottom: 40px;
   justify-content: flex-start;
-  flex-direction: row-reverse; /* Inverte a ordem: imagem à esquerda */
 }
 
-/* Estilização do texto */
+/* Texto ocupa o espaço restante e justificado */
 .texto-destaque {
   color: #2c3e50;
   font-family: Arial, sans-serif;
@@ -33,11 +32,13 @@
   line-height: 1.6;
   max-width: 500px;
   text-align: justify;
+  flex: 1; /* Faz o texto ocupar o espaço restante */
 }
 
-/* Estilização das imagens */
+/* Imagem com tamanho fixo e não encolhe */
 .imagem-destaque {
-  width: 350px;
+  width: 400px;
   height: auto;
   border-radius: 8px;
+  flex-shrink: 0;
 }
