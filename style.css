@@ -1,5 +1,4 @@
 /* Container centralizado */
-/* Container centralizado */
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -14,21 +13,46 @@
   gap: 20px; /* Espaçamento entre o texto e a imagem */
   margin-bottom: 40px;
   justify-content: flex-start; /* Alinha à esquerda */
+  flex-wrap: wrap; /* Para responsividade em telas pequenas */
 }
 
-/* Estilização do primeiro parágrafo (Texto 1) */
+/* Estilização do texto comum */
 .texto-destaque {
   color: #2C3E50; /* Cor forte para o texto (um tom de azul escuro) */
-  font-family: 'Arial', sans-serif; /* Fonte Arial */
+  font-family: 'Arial', sans-serif;
   font-size: 18px;
   line-height: 1.6;
-  max-width: 500px; /* Limita a largura do parágrafo */
-  text-align: justify; /* Justifica o texto */
+  max-width: 500px;
+  text-align: justify;
 }
 
-/* Estilização da primeira imagem */
+/* Texto alinhado à direita para o segundo bloco */
+.texto-destaque-direita {
+  color: #2C3E50;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 500px;
+  text-align: right;
+}
+
+/* Estilização das imagens */
 .imagem-destaque {
-  width: 350px; /* Aumenta o tamanho da imagem */
+  width: 350px;
   height: auto;
   border-radius: 8px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .bloco-destaque {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .texto-destaque,
+  .texto-destaque-direita {
+    text-align: justify; /* Reajusta para leitura melhor em telas pequenas */
+  }
 }
