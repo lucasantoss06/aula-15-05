@@ -15,7 +15,7 @@
   justify-content: flex-start; /* Alinha à esquerda */
 }
 
-/* Bloco com imagem à esquerda e texto à direita */
+/* Bloco invertido: texto primeiro no HTML, mas imagem fica à esquerda */
 .bloco-invertido {
   display: flex;
   align-items: center;
@@ -24,7 +24,27 @@
   justify-content: flex-start;
 }
 
-/* Texto ocupa o espaço restante e justificado */
+/* Força a ordem da imagem para ficar à esquerda */
+.bloco-invertido .imagem-destaque {
+  order: 0;
+  flex-shrink: 0;
+  width: 400px;
+  border-radius: 8px;
+}
+
+/* Texto fica à direita */
+.bloco-invertido .texto-destaque {
+  order: 1;
+  flex: 1;
+  max-width: 500px;
+  color: #2c3e50;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para o texto e imagem da primeira seção */
 .texto-destaque {
   color: #2c3e50;
   font-family: Arial, sans-serif;
@@ -32,10 +52,9 @@
   line-height: 1.6;
   max-width: 500px;
   text-align: justify;
-  flex: 1; /* Faz o texto ocupar o espaço restante */
+  flex: 1;
 }
 
-/* Imagem com tamanho fixo e não encolhe */
 .imagem-destaque {
   width: 400px;
   height: auto;
