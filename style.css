@@ -13,46 +13,22 @@
   gap: 20px; /* Espaçamento entre o texto e a imagem */
   margin-bottom: 40px;
   justify-content: flex-start; /* Alinha à esquerda */
-  flex-wrap: wrap; /* Para responsividade em telas pequenas */
 }
 
-/* Estilização do texto comum */
+/* Estilização do parágrafo */
 .texto-destaque {
-  color: #2C3E50; /* Cor forte para o texto (um tom de azul escuro) */
+  color: #2C3E50; /* Cor do texto */
   font-family: 'Arial', sans-serif;
   font-size: 18px;
   line-height: 1.6;
   max-width: 500px;
+  min-height: 150px; /* Altura mínima para igualar os parágrafos */
   text-align: justify;
 }
 
-/* Texto alinhado à direita para o segundo bloco */
-.texto-destaque-direita {
-  color: #2C3E50;
-  font-family: 'Arial', sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 500px;
-  text-align: right;
-}
-
-/* Estilização das imagens */
+/* Estilização da imagem */
 .imagem-destaque {
   width: 350px;
   height: auto;
   border-radius: 8px;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .bloco-destaque {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .texto-destaque,
-  .texto-destaque-direita {
-    text-align: justify; /* Reajusta para leitura melhor em telas pequenas */
-  }
 }
